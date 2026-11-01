@@ -1,38 +1,73 @@
+import "./App.css";
+import StudentCard from "./components/StudentCard.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import img1 from "./assets/img.jpg";
+import img2 from "./assets/OIP.webp";
+import img3 from "./assets/image3.avif"
+import img4 from "./assets/img4.avif"
 
-import './App.css';
-import  Image from './assets/IMG_3828.JPG';
+const etudiants = [
 
-function App() {
-  const etudiant = {
+    { 
+        NomPrenom:"Arij Ben Nasrallah",
+        Email :"ariijbenna@gmail.com",
+        Telephone:"99 999 999",
+        Filiere:"Genie logiciel et systeme d'information",
+        Groupe:"GLSI 2",
+        Ville:"Mahdia",
+        image:img1
+    },
+    {
+        NomPrenom: "Slim Boubaker",
+        Email: "slim.boubaker@gmail.com",
+        Telephone: "99 999 999",
+        Filiere: "Genie logiciel",
+        Groupe: "GLSI 2",
+        Ville: "Mahdia",
+        image: img2
+    },
+    {
+        NomPrenom: "Sarra Trabelsi",
+        Email: "sarra.trabelsi@gmail.com",
+        Telephone: "22 345 678",
+        Filiere: "Genie logiciel",
+        Groupe: "GLSI 1",
+        Ville: "Sousse",
+        image: img3
+    },
+    {
+        NomPrenom: "Mariem Khalfallah",
+        Email: "mariem.khalfallah@gmail.com",
+        Telephone: "27 567 890",
+        Filiere: "Genie logiciel",
+        Groupe: "GLSI 2",
+        Ville: "Tunis",
+        image: img4
+    }
+];
+function App(){
+    return (
+        <>
+            <div className="Container">
+                <Header/>
+                <Navbar/>
+                {etudiants.map((etudiant, index) => (
+                    <StudentCard 
+                        key={index}
+                        NomPrenom={etudiant.NomPrenom}
+                        Email={etudiant.Email}
+                        Telephone={etudiant.Telephone}
+                        Groupe={etudiant.Groupe}
+                        Ville={etudiant.Ville}
+                        image={etudiant.image}
+                    />
+                ))}
 
-    nom: "Ben Nasrallah ",
-    prenom:"Arij ",
-    email:"arij.ben.nasrallah@gmail.com ",
-    telephone:"29597430"  ,
-    Filière:"Genie Logiciel et systeme d'informatique",
-    k:"Année d'étude",
-    groupe:"GLSI 2D",
-    Ville:"Mahdia",
-    image:Image,
-
-  };
-
-  return (
-    <div style={{ textAlign: "center", marginTop: "40px"}}>
-      <h1>
-        fiche etudiant
-      </h1>
-      <img src={etudiant.image} alt="image etudiant" />
-      <p> {etudiant.prenom}, </p>
-      <p>  {etudiant.nom}, </p>
-      <p> {etudiant.email}, </p>  
-      <p> {etudiant.telephone},</p>
-      <p> {etudiant.Filière},</p>
-      <p> {etudiant.k}, </p>  
-      <p>{etudiant.groupe},</p>  
-      <p>{etudiant.Ville},</p>  
-    </div>
-  );
+            </div>
+            <Footer/>
+        </>
+    );
 }
-
 export default App;

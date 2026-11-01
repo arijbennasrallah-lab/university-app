@@ -1,0 +1,27 @@
+.card {
+  width: 320px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #263b80;
+  text-align: center;
+}
+
+.card p {
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.student-image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}

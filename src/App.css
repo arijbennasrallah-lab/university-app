@@ -1,8 +1,70 @@
-div{
-  font-family:Arial, sans-serif;
+.fiche img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
-img{
-  width : 200px;
-  height:  200px;
-  border-radius : 100 %;
+body{
+    background-color: lightblue;
+}
+.fiche{
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0 ;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+h1{
+    color: lightpink;
+}
+.fiche p{
+    font-size: 18px;
+    line-height: 2;
+    text-align: left;
+}
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 20px;
+}
+nav{
+    background-color: aqua;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+}
+footer{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+header{
+    background-color: #008fa1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+header h1{
+    margin: 0;
+    font-size: 28px;
+}
+header p{
+    margin-top: 10px;
+}
+* {
+  box-sizing: border-box;
 }
