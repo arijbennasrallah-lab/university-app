@@ -1,10 +1,14 @@
-import img1 from "../assets/img.jpg";
+import { useState } from "react";
 function StudentCard(props){
+    const [afficher, setAfficher] = useState(false);
     return (
         <div className="fiche">
             <h1>Fiche Etudiant</h1>
             <img src = {props.image} alt="photo etudiant "/> 
-            <p>
+            <button onClick={() => setAfficher(!afficher)}>
+                {afficher ? "Masquer les informations" : "Afficher les informations"}
+            </button>
+            {afficher && <p>
                 <strong>Nom & Prenom :</strong> {props.NomPrenom}<br></br>
                 <strong>Email :</strong> {props.Email}<br></br>
                 <strong>Telephone : </strong>{props.Telephone}<br></br>
@@ -13,10 +17,17 @@ function StudentCard(props){
                 <strong>Groupe :</strong> {props.Groupe}<br></br>
                 <strong>Ville :</strong> {props.Ville}<br></br>
                 
-            </p>
- 
+            </p>}
+
+            <button onClick={props.onSupprimer}>
+                Supprimer
+            </button>
+            <button onClick={props.onModifier}>
+                Modifier
+            </button>
 
         </div>
+
     );
 }
 export default StudentCard;
